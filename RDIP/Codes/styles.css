@@ -1,0 +1,94 @@
+
+	.topPage{
+		 vertical-align:middle;
+		 margin:10px 110px;
+		 font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+	}
+	
+	.compBtn{ 
+		background-color: #3399cc;
+		color:white;
+		padding: 15px 373px;
+		font-size: 16px;
+		font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+
+	}
+	.outerPage{
+		background-color:  #d3f4f7 ;
+		padding: 0px 30px;
+		margin:0px 110px;
+		font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+		
+	}
+	.innerPage{
+		background-color: white;
+		margin:0px 20px;		
+		padding: 0px 10px;
+		font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+		
+	}
+	.dropDown{
+		font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+		vertical-align:middle;
+		padding: 0px 10px;
+		margin:10px 400px;	
+
+	}
+	#engSelected{
+		font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+		vertical-align:middle;
+		padding: 10px 100px;
+		margin: 0px -10px;
+
+	}
+
+	.tab{
+		padding-left: 10px;
+	}
+
+	.taskBtns{
+		font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+		vertical-align:middle;
+		padding: 10px 100px;
+		margin: 0px -10px;
+
+	}
+
+	.taskBtnsH{
+		font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+		vertical-align:middle;
+		padding: 10px 100px;
+		margin: 0px -10px;
+
+	}
+
+	.formedSentence{
+		font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+		vertical-align:middle;
+		font-weight: bold;
+		font-size:20px;
+		padding: 10px 100px;
+		margin: 0px -10px;
+
+
+	}
+
+	.formedSentenceH{
+		font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+		vertical-align:middle;
+		font-weight: bold;
+		font-size:20px;
+		padding: 10px 100px;
+		margin: 0px -10px;
+
+
+	}
+
+	#hindiSelected{
+		font-family:"Lucida Grande", Tahoma, Arial, Verdana, sans-serif;
+		vertical-align:middle;
+		padding: 10px 100px;
+		margin: 0px -10px;
+
+	}
+
