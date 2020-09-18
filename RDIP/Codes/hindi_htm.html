@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Virtual Labs</title>
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body style="background-color: #0a2f5c;">
+<div class="topPage">
+<img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/themes/blue-icon/images/logo.jpg" alt="Virtual lab logo">
+<button class="compBtn"><b>COMPUTATIONAL LINGUISTICS LAB</b></button> </br>
+<a href="index.html" style="text-decoration: none; color:white;background-color: #0a2f5c; ">Virtual Lab Home</a>
+</div>
+
+<div class="outerPage"><br>
+	<h1 style="vertical-align:middle;">Forming Sentences - 2 </h1><br><br>
+
+<div class="innerPage">
+	<a href="introduction.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/introduction.jpg">INTRODUCTION</a>
+	<a href="theory.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/theory.jpg" >THEORY</a>
+	<a href="objective.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/objective.jpg" >OBJECTIVE</a>
+	<a href="unSelect.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/simulation.jpg" >EXPERIMENT</a>
+	<a href="quizzes.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/quizzes.jpg" >QUIZZES</a>
+	<a href="procedure.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/procedure.jpg" >PROCEDURE</a><br><br>
+	<h2>Experiment</h2><br>
+<div>
+	<select id = "selectOption" name="languageSelect" class="dropDown" onchange="showDiv(this)">
+		<option value="selectNone">--Select Language--</option>
+		<option value="english_task" >English</option>
+		<option value="hindi_task" selected disabled hidden>Hindi</option>
+		<option value="hindi_task">Hindi</option>
+	</select>
+
+
+
+<div id="hindiSelected" style="display: block";>
+		<p style="color: blue;font-size: 18px"><b>Form a sentence (Declarative or Interrogative or any other type) from the given words</b><br></p>
+	<p style="color: blue;font-size: 18px;text-align: center; "><small>(select the buttons in proper order)</small> <br> <br></p>
+
+<!----##--------------------1st sentence----------->
+<div class="taskBtnsH" id = "taskBtnsH" style="display: none;">
+	<button id = "a1Hide" onclick="a1Btn()">कुत्ता</button><span class="tab"/>
+	<button id = "b1Hide" onclick="b1Btn()">को</button><span class="tab"/>
+	<button id = "c1Hide" onclick="c1Btn()">गया</button><span class="tab"/>
+	<button id = "d1Hide" onclick="d1Btn()">मारकर</button><span class="tab"/>
+	<button id = "e1Hide" onclick="e1Btn()">सो</button><span class="tab"/>
+	<button id = "f1Hide" onclick="f1Btn()">बिल्लियों</button><span class="tab"/>
+</div>
+
+<div class="taskBtnsH2" id = "taskBtnsH2" style="display: none;">
+	<button id = "a2Hide" onclick="a2Btn()">राम</button><span class="tab"/>
+	<button id = "b2Hide" onclick="b2Btn()">गयें</button><span class="tab"/>
+	<button id = "c2Hide" onclick="c2Btn()">शयाम</button><span class="tab"/>
+	<button id = "d2Hide" onclick="d2Btn()">बाजार</button><span class="tab"/>
+	<button id = "e2Hide" onclick="e2Btn()">और</button><span class="tab"/>
+</div>
+
+<div class="taskBtnsH3" id = "taskBtnsH3" style="display: none;">
+	<button id = "a3Hide" onclick="a3Btn()">राम</button><span class="tab"/>
+	<button id = "b3Hide" onclick="b3Btn()">भी</button><span class="tab"/>
+	<button id = "c3Hide" onclick="c3Btn()">और</button><span class="tab"/>
+	<button id = "d3Hide" onclick="d3Btn()">शयाम</button><span class="tab"/>
+	<button id = "e3Hide" onclick="e3Btn()">सोया</button><span class="tab"/>
+</div>
+
+<div class="taskBtnsH4" id = "taskBtnsH4" style="display: none;">
+	<button id = "a4Hide" onclick="a4Btn()">रहा</button><span class="tab"/>
+	<button id = "b4Hide" onclick="b4Btn()">सो</button><span class="tab"/>
+	<button id = "c4Hide" onclick="c4Btn()">है</button><span class="tab"/>
+	<button id = "d4Hide" onclick="d4Btn()">मैंने</button><span class="tab"/>
+	<button id = "e4Hide" onclick="e4Btn()">बताया</button><span class="tab"/>
+	<button id = "f4Hide" onclick="f4Btn()">उससे</button><span class="tab"/>
+	<button id = "g4Hide" onclick="g4Btn()">कि</button><span class="tab"/>
+	<button id = "h4Hide" onclick="h4Btn()">राम</button><span class="tab"/>
+</div>
+
+<div class="taskBtnsH5" id = "taskBtnsH5" style="display: none;">
+	<button id = "a5Hide" onclick="a5Btn()">राम</button><span class="tab"/>
+	<button id = "b5Hide" onclick="b5Btn()">सोया</button><span class="tab"/>
+	<button id = "c5Hide" onclick="c5Btn()">खाकर</button><span class="tab"/>
+</div>
+
+<div class="taskBtnsH6" id = "taskBtnsH6" style="display: none;">
+	<button id = "a6Hide" onclick="a6Btn()">एक</button><span class="tab"/>
+	<button id = "b6Hide" onclick="b6Btn()">है</button><span class="tab"/>
+	<button id = "c6Hide" onclick="c6Btn()">लाल</button><span class="tab"/>
+	<button id = "d6Hide" onclick="d6Btn()">वहाँ</button><span class="tab"/>
+	<button id = "e6Hide" onclick="e6Btn()">किताब</button><span class="tab"/>
+</div>
+
+<div class="taskBtnsH7" id = "taskBtnsH7" style="display: none;">
+	<button id = "f7Hide" onclick="f7Btn()">है</button><span class="tab"/>
+	<button id = "a7Hide" onclick="a7Btn()">बड़ी</button><span class="tab"/>
+	<button id = "b7Hide" onclick="b7Btn()">एक</button><span class="tab"/>
+	<button id = "c7Hide" onclick="c7Btn()">किताब</button><span class="tab"/>
+	<button id = "d7Hide" onclick="d7Btn()">वहाँ</button><span class="tab"/>
+	<button id = "e7Hide" onclick="e7Btn()">सी</button><span class="tab"/>
+</div>
+
+<div id="formedSentenceH" class="formedSentenceH">
+	<p style="color: blue;font-size: 18px"><b>Formed Sentence <small>(after selecting words)</small>: </b><br></p>
+	 <br>
+	<p id = "clickedWordsHindi" class="clickedWordsH">
+
+	</p>
+
+	<button id="reformBtnH" style="display: none;" onclick="reformFnH()">Re-form the sentence</button><br>
+	<button id="correctBtnH" style="display: none;" onclick="checkAnsH()">Check the Correctness of this sentence</button><br>
+
+	<h2 id="rightAnsH" style="color:green; display: none;"> Right answer !!!</h2>
+	<h2 id="wrongAnsH" style="color:red; display: none;"> Wrong answer !!!</h2>
+
+	<button id="resultBtnH" style="display: none;" onclick="getAnsH()">Get Answers</button><br>
+	<button id="resultBtnHHide" style="display: none;" onclick="getAnsHHide()">Hide the correct sentence</button><br>
+
+
+	<p id="correctSentencesH" style="display: none;">
+		<br><br>
+		बिल्लियों को मारकर कुत्ता सो गया<br>
+		मारकर बिल्लियों को कुत्ता सो गया<br>
+		बिल्लियों को मारकर सो गया कुत्ता<br>
+		मारकर बिल्लियों को सो गया कुत्ता<br>
+		कुत्ता सो गया बिल्लियों को मारकर<br>
+		कुत्ता सो गया मारकर बिल्लियों को<br>
+		सो गया कुत्ता बिल्लियों को मारकर<br>
+		सो गया कुत्ता मारकर बिल्लियों को<br>
+	</p>
+
+	<p id="correctSentencesH2" style="display: none;"><br>
+        a. राम और श्याम बाजार गयें<br>
+        b. राम और श्याम गयें बाजार<br>
+        c. बाजार गयें राम और श्याम<br>
+        d. गयें बाजार राम और श्याम<br>
+    </p>
+
+    <p id="correctSentencesH3" style="display: none;"><br>
+        a. राम सोया और श्याम भी<br>
+        b. श्याम सोया और राम भी<br>
+        c. सोया श्याम और राम भी<br>
+        d. सोया राम और श्याम भी<br>
+    </p>
+
+    <p id="correctSentencesH4" style="display: none;"><br>
+        a. मैंने उसे बताया कि राम सो रहा है<br>
+        b. मैंने उसे बताया कि सो रहा है राम<br>
+        c. उसे मैंने बताया कि राम सो रहा है<br>
+        d. उसे मैंने बताया कि सो रहा है राम<br>
+        e. मैंने बताया उसे कि राम सो रहा है<br>
+        f. मैंने बताया उसे कि सो रहा है राम<br>
+        g. उसे बताया मैंने कि राम सो रहा है<br>
+        h. उसे बताया मैंने कि सो रहा है राम<br>
+        i. बताया मैंने उसे कि राम सो रहा है<br>
+        j. बताया मैंने उसे कि सो रहा है राम<br>
+        k. बताया उसे मैंने कि राम सो रहा है<br>
+        l. बताया उसे मैंने कि सो रहा है राम<br>
+    </p>
+
+    <p id="correctSentencesH5" style="display: none;"><br>
+        a. राम खाकर सोया<br>
+        b. खाकर राम सोया<br>
+        c. राम सोया खाकर<br>
+        d. खाकर सोया राम<br>
+        e. सोया राम खाकर<br>
+        f. सोया खाकर राम<br>
+    </p>
+
+    <p id="correctSentencesH6" style="display: none;"><br>
+        a. एक लाल किताब वहाँ है<br>
+        b. एक लाल किताब है वहाँ<br>
+        c. वहाँ है एक लाल किताब<br>
+        d. है वहाँ एक लाल किताब<br>
+    </p>
+
+    <p id="correctSentencesH7" style="display: none;"><br>
+    	a. एक बड़ी सी किताब वहाँ है	<br>
+        b. एक बड़ी सी किताब है वहाँ<br>
+        c. बड़ी सी एक किताब वहाँ है<br>
+        d.  बड़ी सी एक किताब है वहाँ<br>
+        e. वहाँ है एक बड़ी सी किताब<br>
+        f. वहाँ है बड़ी सी एक किताब<br>
+        g.  है वहाँ एक बड़ी सी किताब<br>
+        h. है वहाँ बड़ी सी एक किताब<br>
+    </p>
+
+</div>
+</div>	
+</div>
+</div>
+</div>
+
+<script src="eng_exp_page.js"></script>
+<script src="hindiJs.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script >
+	var temp = Math.floor(Math.random()*7);
+    	console.log(temp);
+		if (temp==0){
+			document.getElementById("taskBtnsH").style.display="block";
+			document.getElementById("taskBtnsH2").style.display="none";
+			document.getElementById("taskBtnsH3").style.display="none";
+			document.getElementById("taskBtnsH4").style.display="none";
+			document.getElementById("taskBtnsH5").style.display="none";
+			document.getElementById("taskBtnsH6").style.display="none";
+			document.getElementById("taskBtnsH7").style.display="none";
+		}
+    	else if(temp==1){
+    		document.getElementById("taskBtnsH").style.display="none";
+			document.getElementById("taskBtnsH2").style.display="block";
+			document.getElementById("taskBtnsH3").style.display="none";
+			document.getElementById("taskBtnsH4").style.display="none";
+			document.getElementById("taskBtnsH5").style.display="none";
+			document.getElementById("taskBtnsH6").style.display="none";
+			document.getElementById("taskBtnsH7").style.display="none";
+    	}
+    	else if(temp==2){
+    		document.getElementById("taskBtnsH").style.display="none";
+			document.getElementById("taskBtnsH2").style.display="none";
+			document.getElementById("taskBtnsH3").style.display="block";
+			document.getElementById("taskBtnsH4").style.display="none";
+			document.getElementById("taskBtnsH5").style.display="none";
+			document.getElementById("taskBtnsH6").style.display="none";
+			document.getElementById("taskBtnsH7").style.display="none";
+    	}
+    	else if(temp==3){
+    		document.getElementById("taskBtnsH").style.display="none";
+			document.getElementById("taskBtnsH2").style.display="none";
+			document.getElementById("taskBtnsH3").style.display="none";
+			document.getElementById("taskBtnsH4").style.display="block";
+			document.getElementById("taskBtnsH5").style.display="none";
+			document.getElementById("taskBtnsH6").style.display="none";
+			document.getElementById("taskBtnsH7").style.display="none";
+    	}
+    	else if(temp==4){
+    		document.getElementById("taskBtnsH").style.display="none";
+			document.getElementById("taskBtnsH2").style.display="none";
+			document.getElementById("taskBtnsH3").style.display="none";
+			document.getElementById("taskBtnsH4").style.display="none";
+			document.getElementById("taskBtnsH5").style.display="block";
+			document.getElementById("taskBtnsH6").style.display="none";
+			document.getElementById("taskBtnsH7").style.display="none";
+    	}
+    	else if(temp==5){
+    		document.getElementById("taskBtnsH").style.display="none";
+			document.getElementById("taskBtnsH2").style.display="none";
+			document.getElementById("taskBtnsH3").style.display="none";
+			document.getElementById("taskBtnsH4").style.display="none";
+			document.getElementById("taskBtnsH5").style.display="none";
+			document.getElementById("taskBtnsH6").style.display="block";
+			document.getElementById("taskBtnsH7").style.display="none";
+    	}
+    	else if(temp==6){
+    		document.getElementById("taskBtnsH").style.display="none";
+			document.getElementById("taskBtnsH2").style.display="none";
+			document.getElementById("taskBtnsH3").style.display="none";
+			document.getElementById("taskBtnsH4").style.display="none";
+			document.getElementById("taskBtnsH5").style.display="none";
+			document.getElementById("taskBtnsH6").style.display="none";
+			document.getElementById("taskBtnsH7").style.display="block";
+    	}
+    	
+</script>
+</body>
+</html>

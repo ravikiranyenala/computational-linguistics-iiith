@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Virtual Labs</title>
+<link rel="stylesheet" type="text/css" href="styles.css"/>
+</head>
+<body style="background-color: #0a2f5c;">
+<div class="topPage">
+<img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/themes/blue-icon/images/logo.jpg" alt="Virtual lab logo">
+<button class="compBtn"><b>COMPUTATIONAL LINGUISTICS LAB</b></button> </br>
+<a href="index.html" style="text-decoration: none; color:white;background-color: #0a2f5c; ">Virtual Lab Home</a>
+</div>
+
+<div class="outerPage"><br>
+	<h1 style="vertical-align:middle;">Forming Sentences - 2 </h1><br><br>
+
+<div class="innerPage">
+	<a href="introduction.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/introduction.jpg">INTRODUCTION</a>
+	<a href="theory.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/theory.jpg" >THEORY</a>
+	<a href="objective.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/objective.jpg" >OBJECTIVE</a>
+	<a href="unSelect.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/simulation.jpg" >EXPERIMENT</a>
+	<a href="quizzes.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/quizzes.jpg" >QUIZZES</a>
+	<a href="procedure.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/procedure.jpg" >PROCEDURE</a><br><br>
+	<h2>Experiment</h2><br>
+<div>
+	<select id = "selectOption" name="languageSelect" class="dropDown" onchange="showDiv(this)">
+		<option value="selectNone">--Select Language--</option>
+		<option value="english_task" selected disabled hidden >English</option>
+		<option value="english_task">English</option>
+		<option value="hindi_task">Hindi</option>
+	</select>
+
+
+<div id="engSelected">
+	<p style="color: blue;font-size: 18px"><b>Form a sentence (Declarative or Interrogative or any other type) from the given words</b><br></p>
+	<p style="color: blue;font-size: 18px;text-align: center; "><small>(select the buttons in proper order)</small> <br> <br></p>
+
+
+<!--###########-------------- 1st sentence--------------->
+<div class="taskBtns" id="buttondiv" style="display: none;">
+	<button id = "anHide" onclick="anBtn()">an</button><span class="tab"/>
+	<button id = "beforeHide" onclick="beforeBtn()">before</button><span class="tab"/>
+	<button id = "afternoonHide" onclick="afternoonBtn()">afternoon</button><span class="tab"/>
+	<button id = "ateHide" onclick="ateBtn()">ate</button><span class="tab"/>
+	<button id = "appleHide" onclick="appleBtn()">apple</button><span class="tab"/>
+	<button id = "johnHide" onclick="johnBtn()">John</button><span class="tab"/>
+
+</div>
+
+<!--###########-------------- 2nd sentence--------------->
+<div class="taskBtns2" id="buttondiv2" style="display: none;">
+	<button id = "someHide2" onclick="someBtn2()">some</button><span class="tab"/>
+	<button id = "likeHide2" onclick="likeBtn2()">like</button><span class="tab"/>
+	<button id = "studentsHide2" onclick="studentsBtn2()">students</button><span class="tab"/>
+	<button id = "studyHide2" onclick="studyBtn2()">study</button><span class="tab"/>
+	<button id = "toHide2" onclick="toBtn2()">to</button><span class="tab"/>
+	<button id = "theHide2" onclick="theBtn2()">the</button><span class="tab"/>
+	<button id = "nightHide2" onclick="nightBtn2()">night</button><span class="tab"/>
+	<button id = "inHide2" onclick="inBtn2()">in</button><span class="tab"/>
+
+</div>
+
+<!--###########-------------- 3rd sentence--------------->
+<div class="taskBtns3" id="buttondiv3" style="display: none;">
+	<button id = "andHide3" onclick="andBtn3()">and</button><span class="tab"/>
+	<button id = "churchHide3" onclick="churchBtn3()">church</button><span class="tab"/>
+	<button id = "johnHide3" onclick="johnBtn3()">John</button><span class="tab"/>
+	<button id = "wentHide3" onclick="wentBtn3()">went</button><span class="tab"/>
+	<button id = "maryHide3" onclick="maryBtn3()">Merry</button><span class="tab"/>
+	<button id = "toHide3" onclick="toBtn3()">to</button><span class="tab"/>
+
+</div>
+
+<!--###########-------------- 4th sentence--------------->
+<div class="taskBtns4" id="buttondiv4" style="display: none;">
+	<button id = "johnHide4" onclick="johnBtn4()">John</button><span class="tab"/>
+	<button id = "churchHide4" onclick="churchBtn4()">church</button><span class="tab"/>
+	<button id = "eatingHide4" onclick="eatingBtn4()">eating</button><span class="tab"/>
+	<button id = "wentHide4" onclick="wentBtn4()">went</button><span class="tab"/>
+	<button id = "afterHide4" onclick="afterBtn4()">after</button><span class="tab"/>
+	<button id = "toHide4" onclick="toBtn4()">to</button><span class="tab"/>
+
+</div>
+
+<!--###########-------------- 5th sentence--------------->
+<div class="taskBtns5" id="buttondiv5" style="display: none;">
+	<button id = "goHide5" onclick="goBtn5()">go</button><span class="tab"/>
+	<button id = "toHide5" onclick="toBtn5()">to</button><span class="tab"/>
+	<button id = "didHide5" onclick="didBtn5()">did</button><span class="tab"/>
+	<button id = "marketHide5" onclick="marketBtn5()">market</button><span class="tab"/>
+	<button id = "heHide5" onclick="heBtn5()">he</button><span class="tab"/>
+
+</div>
+
+<!--###########-------------- 6th sentence--------------->
+<div class="taskBtns6" id="buttondiv6" style="display: none;" >
+	<button id = "theHide6" onclick="theBtn6()">the</button><span class="tab"/>
+	<button id = "cosmeticsHide6" onclick="cosmeticsBtn6()">cosmetics</button><span class="tab"/>
+	<button id = "womanHide6" onclick="womanBtn6()">woman</button><span class="tab"/>
+	<button id = "sellsHide6" onclick="sellsBtn6()">sells</button><span class="tab"/>
+	<button id = "whoHide6" onclick="whoBtn6()">who</button><span class="tab"/>
+	<button id = "sisterHide6" onclick="sisterBtn6()">sister</button><span class="tab"/>
+	<button id = "calledHide6" onclick="calledBtn6()">called</button><span class="tab"/>
+	<button id = "myHide6" onclick="myBtn6()">my</button><span class="tab"/>
+	
+</div>
+
+<!--###########-------------- 7th sentence--------------->
+<div class="taskBtns7" id="buttondiv7" style="display: none;">
+	<button id = "johnHide7" onclick="johnBtn7()">John</button><span class="tab"/>
+	<button id = "studiesHide7" onclick="studiesBtn7()">studies</button><span class="tab"/>
+	<button id = "goesHide7" onclick="goesBtn7()">goes</button><span class="tab"/>
+	<button id = "andHide7" onclick="andBtn7()">and</button><span class="tab"/>
+	<button id = "toHide7" onclick="toBtn7()">to</button><span class="tab"/>	
+	<button id = "libraryHide7" onclick="libraryBtn7()">library</button><span class="tab"/>
+	<button id = "theHide7" onclick="theBtn7()">the</button><span class="tab"/>	
+
+</div>
+
+<!--###########-------------- 8th sentence--------------->
+<div class="taskBtns8" id="buttondiv8" style="display: none;">
+	<button id = "johnHide8" onclick="johnBtn8()">John</button><span class="tab"/>
+	<button id = "sheHide8" onclick="sheBtn8()">she</button><span class="tab"/>
+	<button id = "anHide8" onclick="anBtn8()">an</button><span class="tab"/>
+	<button id = "soHide8" onclick="soBtn8()">so</button><span class="tab"/>
+	<button id = "ateHide8" onclick="ateBtn8()">ate</button><span class="tab"/>	
+	<button id = "appleHide8" onclick="appleBtn8()">apple</button><span class="tab"/>	
+	<button id = "didHide8" onclick="didBtn8()">did</button><span class="tab"/>
+</div>
+
+<!--###########-------------- 9th sentence--------------->
+<div class="taskBtns9" id="buttondiv9" style="display: none;">
+	<button id = "theHide9_1" onclick="theBtn9_1()">the</button><span class="tab"/>	
+	<button id = "errorHide9" onclick="errorBtn9()">error</button><span class="tab"/>
+	<button id = "returnedHide9" onclick="returnedBtn9()">returned</button><span class="tab"/>
+	<button id = "theHide9_2" onclick="theBtn9_2()">the</button><span class="tab"/>
+	<button id = "bookHide9" onclick="bookBtn9()">book</button><span class="tab"/>
+	<button id = "noticedHide9" onclick="noticedBtn9()">noticed</button><span class="tab"/>
+	<button id = "teacherHide9" onclick="teacherBtn9()">teacher</button><span class="tab"/>
+	<button id = "afterHide9" onclick="afterBtn9()">after</button><span class="tab"/>
+	<button id = "sheHide9" onclick="sheBtn9()">she</button><span class="tab"/>	
+	<button id = "theHide9_3" onclick="theBtn9_3()">the</button><span class="tab"/>	
+</div>
+
+<!--###########-------------- 10th sentence--------------->
+<div class="taskBtns10" id="buttondiv10" style="display: none;">
+	
+	<button id = "toldHide10" onclick="toldBtn10()">told</button><span class="tab"/>
+	<button id = "iHide10_1" onclick="iBtn10_1()">I</button><span class="tab"/>
+	<button id = "iHide10_2" onclick="iBtn10_2()">I</button><span class="tab"/>
+	<button id = "herHide10" onclick="herBtn10()">her</button><span class="tab"/>	
+	<button id = "boughtHide10" onclick="boughtBtn10()">bought</button><span class="tab"/>
+	<button id = "thatHide10" onclick="thatBtn10()">that</button><span class="tab"/>
+	<button id = "aHide10" onclick="aBtn10()">a</button><span class="tab"/>
+	<button id = "bookHide10" onclick="bookBtn10()">book</button><span class="tab"/>	
+	<button id = "yesterdayHide10" onclick="yesterdayBtn10()">yesterday</button><span class="tab"/>
+</div>
+
+<!-----##########---------------buttons cmpltd------------>
+
+
+
+<div id="formedSentence" class="formedSentence">
+	<p style="color: blue;font-size: 18px"><b>Formed Sentence <small>(after selecting words)</small>: </b><br></p>
+	 <br>
+
+	<p id = "clickedWords" class="clickedWords">
+
+	</p>
+
+	<button id="reformBtn" style="display: none;" onclick="reformFn()">Re-form the sentence</button><br>
+
+	<button id="correctBtn" style="display: none;" onclick="checkAns()">Check the Correctness of this sentence</button><br>
+
+	<h2 id="rightAns" style="color:green; display: none;"> Right answer !!!</h2>
+	<h2 id="wrongAns" style="color:red; display: none;"> Wrong answer !!!</h2>
+
+	<button id="resultBtn" style="display: none;" onclick="getAns()">Get Answers</button>
+	<button id="resultBtnHide" style="display: none;" onclick="getAnsHide()">Hide the correct sentence</button><br>
+
+
+	<p id="correctSentences" style="display: none;">
+		<br>John ate an apple before afternoon<br>
+		before afternoon John ate an apple<br>
+		John before afternoon ate an apple<br><br>
+
+	</p>
+	<p id="correctSentences2" style="display: none;"><br>
+        a. some students like to study in the night<br>
+        b. at night some students like to study<br>
+    </p>
+    <p id="correctSentences3" style="display: none;"><br>
+        a. John and Merry went to church<br>
+        b. Merry and John went to church<br>
+    </p>
+    <p id="correctSentences4" style="display: none;"><br>
+        a. John went to church after eating	<br>
+        b. after eating John went to church<br>
+        c. John after eating went to church<br>
+    </p>
+    <p id="correctSentences5" style="display: none;"><br>
+        a. did he go to market	<br>
+        b. he did go to market<br>
+    </p>
+    <p id="correctSentences6" style="display: none;"><br>
+        a. the woman who called my sister sells cosmetics<br>
+        b. the woman who sells cosmetics called my sister<br>
+        c. my sister who sells cosmetics called the woman<br>
+        d. my sister who called the woman sells cosmetics<br>
+    </p>
+    <p id="correctSentences7" style="display: none;"><br>
+        a. John goes to the library and studies<br>
+        b. John studies and goes to the library<br>
+    </p>
+    <p id="correctSentences8" style="display: none;"><br>
+        a. John ate an apple so did she<br>
+        b. she ate an apple so did John<br>
+    </p>
+    <p id="correctSentences9" style="display: none;"><br> 
+        a. the teacher returned the book after she noticed the error<br>
+        b. the teacher noticed the error after she returned the book<br>
+        c. after the teacher returned the book she noticed the error<br>
+        d. after the teacher noticed the error she returned the book<br>
+        e. she returned the book after the teacher noticed the error<br>
+        f. she noticed the error after the teacher returned the book<br>
+        g. after she returned the book the teacher noticed the error<br>
+        h. after she noticed the error the teacher returned the book<br>
+    </p>
+    <p id="correctSentences10" style="display: none;"><br> 
+        a. I told her that I bought a book yesterday<br>
+        b. I told her yesterday that I bought a book<br>
+        c. yesterday I told her that I bought a book<br>
+        d. I bought a book that I told her yesterday<br>
+        e. I bought a book yesterday that I told her<br>
+        f. yesterday I bought a book that I told her<br>
+	</p>
+
+</div>
+	<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</div>
+</div>
+</div>
+</div>
+
+<script src="eng_exp_page.js"></script>
+<script src="hindiJs.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script >
+	var temp = Math.floor(Math.random() * 10);
+    	console.log(temp);
+		if (temp==0){
+			document.getElementById("buttondiv").style.display="block";
+			document.getElementById("buttondiv2").style.display="none";
+			document.getElementById("buttondiv3").style.display="none";
+			document.getElementById("buttondiv4").style.display="none";
+			document.getElementById("buttondiv5").style.display="none";
+			document.getElementById("buttondiv6").style.display="none";
+			document.getElementById("buttondiv7").style.display="none";
+			document.getElementById("buttondiv8").style.display="none";
+			document.getElementById("buttondiv9").style.display="none";
+			document.getElementById("buttondiv10").style.display="none";
+
+		}
+    	else if(temp==1){
+    		document.getElementById("buttondiv").style.display="none";
+			document.getElementById("buttondiv2").style.display="block";
+			document.getElementById("buttondiv3").style.display="none";
+			document.getElementById("buttondiv4").style.display="none";
+			document.getElementById("buttondiv5").style.display="none";
+			document.getElementById("buttondiv6").style.display="none";
+			document.getElementById("buttondiv7").style.display="none";
+			document.getElementById("buttondiv8").style.display="none";
+			document.getElementById("buttondiv9").style.display="none";
+			document.getElementById("buttondiv10").style.display="none";
+    	}
+    	else if(temp==2){
+    		document.getElementById("buttondiv").style.display="none";
+			document.getElementById("buttondiv2").style.display="none";
+			document.getElementById("buttondiv3").style.display="block";
+			document.getElementById("buttondiv4").style.display="none";
+			document.getElementById("buttondiv5").style.display="none";
+			document.getElementById("buttondiv6").style.display="none";
+			document.getElementById("buttondiv7").style.display="none";
+			document.getElementById("buttondiv8").style.display="none";
+			document.getElementById("buttondiv9").style.display="none";
+			document.getElementById("buttondiv10").style.display="none";
+    	}
+    	else if(temp==3){
+    		document.getElementById("buttondiv").style.display="none";
+			document.getElementById("buttondiv2").style.display="none";
+			document.getElementById("buttondiv3").style.display="none";
+			document.getElementById("buttondiv4").style.display="block";
+			document.getElementById("buttondiv5").style.display="none";
+			document.getElementById("buttondiv6").style.display="none";
+			document.getElementById("buttondiv7").style.display="none";
+			document.getElementById("buttondiv8").style.display="none";
+			document.getElementById("buttondiv9").style.display="none";
+			document.getElementById("buttondiv10").style.display="none";
+    	}
+    	else if(temp==4){
+    		document.getElementById("buttondiv").style.display="none";
+			document.getElementById("buttondiv2").style.display="none";
+			document.getElementById("buttondiv3").style.display="none";
+			document.getElementById("buttondiv4").style.display="none";
+			document.getElementById("buttondiv5").style.display="block";
+			document.getElementById("buttondiv6").style.display="none";
+			document.getElementById("buttondiv7").style.display="none";
+			document.getElementById("buttondiv8").style.display="none";
+			document.getElementById("buttondiv9").style.display="none";
+			document.getElementById("buttondiv10").style.display="none";
+    	}
+    	else if(temp==5){
+    		document.getElementById("buttondiv").style.display="none";
+			document.getElementById("buttondiv2").style.display="none";
+			document.getElementById("buttondiv3").style.display="none";
+			document.getElementById("buttondiv4").style.display="none";
+			document.getElementById("buttondiv5").style.display="none";
+			document.getElementById("buttondiv6").style.display="block";
+			document.getElementById("buttondiv7").style.display="none";
+			document.getElementById("buttondiv8").style.display="none";
+			document.getElementById("buttondiv9").style.display="none";
+			document.getElementById("buttondiv10").style.display="none";
+    	}
+    	else if(temp==6){
+    		document.getElementById("buttondiv").style.display="none";
+			document.getElementById("buttondiv2").style.display="none";
+			document.getElementById("buttondiv3").style.display="none";
+			document.getElementById("buttondiv4").style.display="none";
+			document.getElementById("buttondiv5").style.display="none";
+			document.getElementById("buttondiv6").style.display="none";
+			document.getElementById("buttondiv7").style.display="block";
+			document.getElementById("buttondiv8").style.display="none";
+			document.getElementById("buttondiv9").style.display="none";
+			document.getElementById("buttondiv10").style.display="none";
+    	}
+    	else if(temp==7){
+    		document.getElementById("buttondiv").style.display="none";
+			document.getElementById("buttondiv2").style.display="none";
+			document.getElementById("buttondiv3").style.display="none";
+			document.getElementById("buttondiv4").style.display="none";
+			document.getElementById("buttondiv5").style.display="none";
+			document.getElementById("buttondiv6").style.display="none";
+			document.getElementById("buttondiv7").style.display="none";
+			document.getElementById("buttondiv8").style.display="block";
+			document.getElementById("buttondiv9").style.display="none";
+			document.getElementById("buttondiv10").style.display="none";
+    	}
+    	else if(temp==8){
+    		document.getElementById("buttondiv").style.display="none";
+			document.getElementById("buttondiv2").style.display="none";
+			document.getElementById("buttondiv3").style.display="none";
+			document.getElementById("buttondiv4").style.display="none";
+			document.getElementById("buttondiv5").style.display="none";
+			document.getElementById("buttondiv6").style.display="none";
+			document.getElementById("buttondiv7").style.display="none";
+			document.getElementById("buttondiv8").style.display="none";
+			document.getElementById("buttondiv9").style.display="block";
+			document.getElementById("buttondiv10").style.display="none";
+    	}
+    	else if(temp==9){
+    		document.getElementById("buttondiv").style.display="none";
+			document.getElementById("buttondiv2").style.display="none";
+			document.getElementById("buttondiv3").style.display="none";
+			document.getElementById("buttondiv4").style.display="none";
+			document.getElementById("buttondiv5").style.display="none";
+			document.getElementById("buttondiv6").style.display="none";
+			document.getElementById("buttondiv7").style.display="none";
+			document.getElementById("buttondiv8").style.display="none";
+			document.getElementById("buttondiv9").style.display="none";
+			document.getElementById("buttondiv10").style.display="block";
+    	}
+</script>
+
+</body>
+</html>
