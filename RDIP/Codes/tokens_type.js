@@ -90,7 +90,30 @@ function newTypeEnable(){
 
 function newTypeCheck(){
 	var checkEntrdVal = document.getElementById("newTypeData").value;
-	if (checkEntrdVal==73){
+	//--------------stemmer-----------
+	var testStemmer = new Snowball("english");
+	var line = document.getElementById("passage_1").textContent;
+	line = line.trim().toLowerCase();
+	line =  line.replace(/[^a-zA-Z 0-9]+/g,'');
+	line = line.split(" ");
+	var line_length = line.length;
+	var wordsNew = [];
+	for (var i=0; i<line_length; i++ ){
+		testStemmer.setCurrent(line[i]);
+		testStemmer.stem();
+		temp = testStemmer.getCurrent();
+		wordsNew.push(temp);
+	}
+	var uniqueArray = [];
+    for(var j=0; j < wordsNew.length; j++){
+	    if(uniqueArray.indexOf(wordsNew[j]) === -1) {
+	        uniqueArray.push(wordsNew[j]);
+	    }
+	}
+	var newTypeResult = uniqueArray.length;
+	console.log(uniqueArray.length);
+	//--------------------------
+	if (checkEntrdVal==newTypeResult){
 		document.getElementById("newTypeData").style.backgroundColor="green";
 		document.getElementById("rightAnsNewType").style.display="block";
 		document.getElementById("wrongAnsNewType").style.display="none";
@@ -177,18 +200,31 @@ function newTypeEnable2(){
 
 function newTypeCheck2(){
 	var checkEntrdVal = document.getElementById("newTypeData2").value;
+	//--------------stemmer------------
+	var testStemmer = new Snowball("english");
+	var line = document.getElementById("passage_2").textContent;
+	line = line.trim().toLowerCase();
+	line =  line.replace(/[^a-zA-Z 0-9]+/g,'');
+	line = line.split(" ");
+	var line_length = line.length;
+	var wordsNew = [];
+	for (var i=0; i<line_length; i++ ){
+		testStemmer.setCurrent(line[i]);
+		testStemmer.stem();
+		temp = testStemmer.getCurrent();
+		wordsNew.push(temp);
+	}
+	var uniqueArray = [];
+    for(var j=0; j < wordsNew.length; j++){
+	    if(uniqueArray.indexOf(wordsNew[j]) === -1) {
+	        uniqueArray.push(wordsNew[j]);
+	    }
+	}
+	var newTypeResult = uniqueArray.length;
+	console.log(uniqueArray.length);
+	//--------------------------
 
-
-	//var natural = require("natural");
-	//console.log(natural.PorterStemmer.stem("running"));
-	var stemmer = require('stemmer');
-	//var stemmer = new Snowball('English');
-	//stemmer.setCurrent('abbreviations');     
-	//stemmer.stem();
-	console.log(stemmer("consideration"));      
-
-
-	if (checkEntrdVal==73){
+	if (checkEntrdVal==newTypeResult){
 		document.getElementById("newTypeData2").style.backgroundColor="green";
 		document.getElementById("rightAnsNewType2").style.display="block";
 		document.getElementById("wrongAnsNewType2").style.display="none";
@@ -275,7 +311,30 @@ function newTypeEnable3(){
 
 function newTypeCheck3(){
 	var checkEntrdVal = document.getElementById("newTypeData3").value;
-	if (checkEntrdVal==73){
+	//------------stemmer-----------------
+	var testStemmer = new Snowball("english");
+	var line = document.getElementById("passage_3").textContent;
+	line = line.trim().toLowerCase();
+	line =  line.replace(/[^a-zA-Z 0-9]+/g,'');
+	line = line.split(" ");
+	var line_length = line.length;
+	var wordsNew = [];
+	for (var i=0; i<line_length; i++ ){
+		testStemmer.setCurrent(line[i]);
+		testStemmer.stem();
+		temp = testStemmer.getCurrent();
+		wordsNew.push(temp);
+	}
+	var uniqueArray = [];
+    for(var j=0; j < wordsNew.length; j++){
+	    if(uniqueArray.indexOf(wordsNew[j]) === -1) {
+	        uniqueArray.push(wordsNew[j]);
+	    }
+	}
+	var newTypeResult = uniqueArray.length;
+	console.log(uniqueArray.length);
+	//----------------------------
+	if (checkEntrdVal==newTypeResult){
 		document.getElementById("newTypeData3").style.backgroundColor="green";
 		document.getElementById("rightAnsNewType3").style.display="block";
 		document.getElementById("wrongAnsNewType3").style.display="none";
