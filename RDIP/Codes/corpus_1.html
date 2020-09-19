@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>Virtual Labs</title>
+<link rel="stylesheet" type="text/css" href="styles_TT.css"/>
+</head>
+<body style="background-color: #0a2f5c; color: #475051 ">
+<div class="topPage">
+<img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/themes/blue-icon/images/logo.jpg" alt="Virtual lab logo">
+<button class="compBtn"><b>COMPUTATIONAL LINGUISTICS LAB</b></button> </br>
+<a href="index_TT.html" style="text-decoration: none; color:white;background-color: #0a2f5c; ">Virtual Lab Home</a>
+</div>
+
+<div class="outerPage"><br>
+	<h1 style="vertical-align:middle;"> Tokens and Types </h1><br><br>
+
+<div class="innerPage">
+	<a href="introduction_TT.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/introduction.jpg">INTRODUCTION</a>
+	<a href="theory_TT.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/theory.jpg" >THEORY</a>
+	<a href="objective_TT.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/objective.jpg" >OBJECTIVE</a>
+	<a href="unSelect_TT.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/simulation.jpg" >EXPERIMENT</a>
+	<a href="quizzes_TT.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/quizzes.jpg" >QUIZZES</a>
+	<a href="procedure_TT.html"><img src="https://raw.githubusercontent.com/ravikiranyenala/computational-linguistics-iiith/master/src/lab/images/procedure.jpg" >PROCEDURE</a><br><br>
+	<h2>Experiment</h2><br>
+<div>
+	<select id = "selectOption" name="languageSelect" class="dropDown" onchange="showDiv(this)">
+		<option value="selectNone">--Select a Corpus--</option>
+		<option value="corpus_1" selected disabled hidden>Corpus 1</option>
+		<option value="corpus_1">Corpus 1</option>
+		<option value="corpus_2">Corpus 2</option>
+		<option value="corpus_3">Corpus 3</option>
+	</select>
+
+
+<div id="passage_1" style="display: block;">
+		<br>
+		A mouse was having a very bad time. She could find no food at all. She looked here and there, but there was no food, and she grew very thin. At last the mouse found a basket, full of corn. There was a small hole in the basket, and she crept in. She could just get through the hole. Then she began to eat the corn. Being very hungry, she ate a great deal, and went on eating and eating. She had grown very fat before she felt that she had had enough. When the mouse tried to climb out of the basket, she could not. She was too fat to pass through the hole. "How shall I climb out?" said the mouse. "oh, how shall I climb out?" Just then a rat came along, and he heard the mouse. "Mouse" said the rat, "if you want to climb out of the basket, you must wait till you have grown as thin as you were when you went in."
+		<br><br>
+</div>	
+
+<div id = "ttResult" class = "crps1Table" style="display: block; text-align: center;">
+	Enter the number of tokens and types for the above corpus:<br><br>
+
+	<table class="center">
+		<tr>
+			<td>#tokens:</td>
+			<td><input type="text" id="tokensData" size="5"></td>
+		</tr>
+		<tr>
+			<td>#types:</td>
+			<td><input type="text" id="typesData" size="5"></td>
+		</tr>
+	</table>
+	<br><br>
+	<input type="button" id ="tokenSubmitBtn" value="submit" onclick="tokenCntCheck1()"><br><br>
+
+</div>
+
+<div id="rightAnsToken" style="color:green;font-size: 20px; display: none;text-align: center;">
+	Right Answer
+</div>
+
+<div id="wrongAnsToken" style="color:red;font-size: 20px; display: none;text-align: center;">
+	Wrong Answer
+</div>
+	<br>
+<div id="continueBtn" style="display: none;text-align: center;">
+	<input type="button" value="Continue" onclick="newTypeEnable()">
+
+</div>
+
+<div id="newType" style="display: none; text-align: center;">
+	Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types.<br><br>
+	#new types:<br>
+	<input type="text" id="newTypeData" size="5">
+	<br><br>
+	<input type="button" value="submit" onclick="newTypeCheck()"><br><br>
+
+</div>
+<div id="rightAnsNewType" style="color:green;font-size: 20px; display: none;text-align: center;">
+	Right Answer
+</div>
+
+<div id="wrongAnsNewType" style="color:red;font-size: 20px; display: none;text-align: center;">
+	Wrong Answer
+</div>
+
+
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</div>
+</div>
+</div>
+
+<script src="tokens_type.js"></script>
+<script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script data-main="scripts/main.js" src="scripts/require.js"></script>
+</body>
+</html>
